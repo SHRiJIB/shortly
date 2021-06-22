@@ -1,9 +1,25 @@
 import React from "react";
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
+import Footer from "./components/Footer/Footer";
+import Main from "./components/Main/Main";
+import Navbar from "./components/navbar/Navbar";
 
-const H1 = styled.h1`
-  color: red;
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin:0;
+    padding:0;
+    font-size:1rem;
+    
+    font-family: 'Poppins', sans-serif ;
+  }
 `;
-const App = () => <H1>Shortly</H1>;
+const App = () => (
+  <>
+    <GlobalStyle />
 
+    <Navbar />
+    <Main />
+    <Footer />
+  </>
+);
 export default App;
