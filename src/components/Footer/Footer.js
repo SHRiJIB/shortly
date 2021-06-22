@@ -1,17 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const div = styled.div`
+const Container = styled.div`
   margin-top: auto;
+  height: 40vh;
+  background-color: #3b3054;
+  color: #fff;
+`;
+const P = styled.p`
+  margin: 0;
 `;
 const Footer = () => {
   return (
-    <div>
-      <h3>Footer</h3>
-      <h3>Footer</h3>
-      <h3>Footer</h3>
-      <h3>Footer</h3>
-    </div>
+    <Container>
+      <P>Footer</P>
+      <P>Footer</P>
+      <P>Footer</P>
+      <P>Footer</P>
+    </Container>
   );
 };
 
