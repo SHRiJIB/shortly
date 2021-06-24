@@ -6,17 +6,33 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   padding: 20px 0 80px;
+  img {
+    margin: 2%;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    img {
+      width: 300px;
+      height: 90%;
+    }
+    h1 {
+      margin-left: 0;
+      font-size: 40px;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 8%;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-left: 0;
+  }
 `;
 
-const Img = styled.img`
-  margin: 2%;
-`;
 const H1 = styled.h1`
   font-size: 80px;
   font-weight: 700;
@@ -41,7 +57,7 @@ const Main = () => {
           <CustomButton primary text="Get started" margin />
         </div>
       </Wrapper>
-      <Img src="../../images/illustration-working.svg" alt="working" />
+      <img src="../../images/illustration-working.svg" alt="working" />
     </Container>
   );
 };
