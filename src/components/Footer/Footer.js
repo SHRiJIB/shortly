@@ -1,23 +1,45 @@
 import React from "react";
 import styled from "styled-components";
+import { ReactComponent as LogoFooter } from "../../images/logo-footer.svg";
 
-const Container = styled.div`
+const Footerr = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: auto;
   height: 40vh;
   background-color: #3b3054;
   color: #fff;
 `;
-const P = styled.p`
-  margin: 0;
+
+const Brand = styled.a`
+  fill: antiquewhite;
 `;
+
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+`;
+const Col = styled.div`
+  margin-top: 20px;
+`;
+
 const Footer = () => {
   return (
-    <Container>
-      <P>Footer</P>
-      <P>Footer</P>
-      <P>Footer</P>
-      <P>Footer</P>
-    </Container>
+    <Footerr>
+      <Container>
+        <Col>
+          <Brand href="/">
+            <LogoFooter />
+          </Brand>
+        </Col>
+        <Col>Footer</Col>
+        <Col>Footer</Col>
+        <Col>Footer</Col>
+        <Col>Footer</Col>
+      </Container>
+    </Footerr>
   );
 };
 

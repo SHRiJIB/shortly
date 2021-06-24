@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CustomButton from "../button/CustomButton";
+import { ReactComponent as Logo } from "../../images/logo.svg";
 
 const NavbarContainer = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 50%;
+  width: 900px;
 `;
 const Navlink = styled.a`
   text-decoration: none;
@@ -38,7 +39,7 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <Brand href="/">
-        <img src="./images/logo.svg" alt="logo" />
+        <Logo />
       </Brand>
       <Nav>
         <Navlink href="/">Features</Navlink>

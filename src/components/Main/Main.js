@@ -5,6 +5,7 @@ import CustomButton from "../button/CustomButton";
 const Container = styled.div`
   display: flex;
   align-items: center;
+  padding: 20px 0 80px;
 `;
 
 const Wrapper = styled.div`
