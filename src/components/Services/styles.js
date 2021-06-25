@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   background-color: #f1f1f1;
   position: relative;
@@ -95,7 +95,7 @@ export const Grid = styled.div`
 `;
 
 export const Card = styled.div`
-  height: 300px;
+  min-height: 300px;
   border-radius: 0.25rem;
   background-color: #fff;
   text-align: center;

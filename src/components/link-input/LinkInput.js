@@ -27,7 +27,12 @@ const LinkInput = ({ shortUrls, setShortUrls }) => {
     <>
       <Container column>
         <Form action="" onSubmit={handleSubmit}>
-          <Input type="text" value={url} onChange={handleChange} />
+          <Input
+            type="text"
+            value={url}
+            onChange={handleChange}
+            placeholder="Shorten a link here..."
+          />
           <CustomButton primary text="shorten it!" radius="12px" />
         </Form>
         {error && <span>Url can't be empty</span>}

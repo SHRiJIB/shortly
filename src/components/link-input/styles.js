@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: ${(props) => (props.column ? "column" : "row")};
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  max-width: 100vw;
   height: auto;
   position: ${(props) => (props.position ? props.position : "static")};
   top: ${(props) => (props.top ? props.top : "0")};
@@ -20,18 +20,22 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-  width: 70vw;
-  height: 20vh;
+  min-width: 70vw;
+  min-height: 20vh;
   display: flex;
   align-items: center;
   border-radius: 15px;
   justify-content: center;
-  background: url("../../images/bg-boost-desktop.svg");
+  background: url("../../images/bg-shorten-desktop.svg");
   background-color: #3b3054;
+  background-size: cover;
 
-  @media (max-width: 768px) {
+  @media (max-width: 915px) {
     flex-direction: column;
     align-items: stretch;
+    background: url("../../images/bg-shorten-mobile.svg");
+    background-color: #3b3054;
+    background-size: cover;
 
     button {
       margin: 10px;
@@ -41,13 +45,15 @@ export const Form = styled.form`
 
 export const Input = styled.input`
   min-width: 60%;
-  height: 25%;
-  padding: 5px;
+  /* height: 25%; */
+  padding: 16px;
   border: 1px solid #fff;
   border-radius: 12px;
-  margin-right: 2%;
+  margin: 2%;
   color: #9e9aa7;
   font-size: 1rem;
+  font-weight: 700;
+
   &:focus {
     outline: none;
   }
